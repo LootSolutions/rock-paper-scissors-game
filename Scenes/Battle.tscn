@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Battle.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Kenney Thick.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Battle" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Right" type="Polygon2D" parent="."]
+position = Vector2( 2017.65, 327.144 )
+scale = Vector2( -1, 1 )
+color = Color( 0, 0.529412, 1, 1 )
+offset = Vector2( -106.351, -327.144 )
+polygon = PoolVector2Array( 0, 0, 1024, 600, 0, 600 )
+
+[node name="Left" type="Polygon2D" parent="."]
+position = Vector2( -996, 272 )
+scale = Vector2( 1, -1 )
+color = Color( 1, 0, 0, 1 )
+offset = Vector2( -106.351, -327.144 )
+polygon = PoolVector2Array( 2.35052, -0.855896, 1026.35, 599.144, 0, 600 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSLabel" type="Label" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -27.0
+margin_right = 48.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 1 )
+text = "VS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerChoice" type="Label" parent="Control"]
+margin_left = 50.0
+margin_right = 464.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 1 )
+text = "TEMP"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CpuChoice" type="Label" parent="Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -464.0
+margin_top = -168.0
+margin_right = -50.0
+custom_fonts/font = SubResource( 1 )
+text = "TEMP"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
