@@ -14,7 +14,7 @@ func _on_request_completed(result, response_code, headers, body):
 	if display_name != null:
 		$Control/Label2.text = "Welcome, " + display_name
 	else:
-		$Control/Label2.text = "Welcome!"
+		$Control/Label2.text = "Welcome"
 	
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/CPU_Game.tscn")

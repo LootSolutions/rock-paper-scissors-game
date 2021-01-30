@@ -11,7 +11,7 @@ func _on_request_completed(result, response_code, headers, body):
 	
 	var assets = json.result.assets
 	
-	if assets != null:
+	if assets == true:
 		$ChoiceSprite.texture = crystal
 		$ChoiceSprite.scale = Vector2(0.1, 0.1)
 
